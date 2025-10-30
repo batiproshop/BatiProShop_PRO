@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "id": "leg-4r-21dj",
+      "brand": "Legrand",
+      "name": "Tableau 4 rangées – 4ID 63A + 21 disjoncteurs",
+      "category": "electricite",
+      "subcategory": "tableaux",
+      "price_ttc": 350.0,
+      "tva": 0.2,
+      "image": "images/uploads/legrand-4rangees-21dj.jpg",
+      "short_desc": "Drivia 4 rangées, 4 ID 63A 30mA (1 A + 3 AC) + 21 DJ 10–32A.",
+      "promo": {
+        "active": false,
+        "percent": 0,
+        "price_old": 0
+      },
+      "specs": [
+        "Tableau Drivia 4 rangées (401214)",
+        "ID 63A 30mA: type A ×1, type AC ×3",
+        "DJ 1P+N: 32A×1, 20A×6, 16A×9, 10A×5",
+        "Peignes P+N, bornier terre, liaison verticale",
+        "Réserve ~36% (≈19 modules)"
+      ]
+    }
+  ]
+}

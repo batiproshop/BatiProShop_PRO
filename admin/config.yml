@@ -1,0 +1,83 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: 'fr'
+
+collections:
+  - label: "Catalogue"
+    name: "catalogue"
+    files:
+      - label: "Produits"
+        name: "products"
+        file: "data/products.json"
+        fields:
+          - label: "Produits"
+            name: "items"
+            widget: "list"
+            label_singular: "Produit"
+            collapsed: false
+            fields:
+              - {label: "ID", name: "id", widget: "string"}
+              - {label: "Marque", name: "brand", widget: "string"}
+              - {label: "Nom", name: "name", widget: "string"}
+              - {label: "Catégorie", name: "category", widget: "select", options: ["electricite","outils","accessoires","securite"]}
+              - {label: "Sous-catégorie", name: "subcategory", widget: "string", required: false}
+              - {label: "Prix TTC", name: "price_ttc", widget: "number", value_type: "float", min: 0}
+              - {label: "TVA (0-1)", name: "tva", widget: "number", value_type: "float", min: 0, max: 1, default: 0.20}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Résumé", name: "short_desc", widget: "text", required: false}
+              - label: "Promo"
+                name: "promo"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - {label: "Active", name: "active", widget: "boolean", default: false}
+                  - {label: "Réduction %", name: "percent", widget: "number", value_type: "int", min: 0, max: 90, default: 0}
+                  - {label: "Ancien prix", name: "price_old", widget: "number", value_type: "float", min: 0, default: 0}
+              - label: "Caractéristiques"
+                name: "specs"
+                widget: "list"
+                field: {label: "Ligne", name: "line", widget: "string"}
+
+  - label: "Paramètres société"
+    name: "settings"
+    files:
+      - label: "Réglages"
+        name: "settings_file"
+        file: "data/settings.json"
+        fields:
+          - {label: "Nom de l’entreprise", name: "company_name", widget: "string"}
+          - {label: "Forme juridique", name: "legal_form", widget: "string"}
+          - {label: "Capital", name: "capital", widget: "string"}
+          - {label: "SIREN", name: "siren", widget: "string", required: false}
+          - {label: "TVA intracom", name: "tva_intra", widget: "string", required: false}
+          - {label: "Adresse", name: "address", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Téléphone", name: "phone", widget: "string", required: false}
+          - label: "Thème"
+            name: "theme"
+            widget: "object"
+            fields:
+              - {label: "Couleur principale", name: "primary", widget: "string", default: "#1f4aff"}
+              - {label: "Fond", name: "background", widget: "string", default: "#f6f7f8"}
+              - {label: "Texte", name: "text", widget: "string", default: "#111111"}
+              - {label: "Texte du bouton", name: "button_text", widget: "string", default: "#ffffff"}
+          - label: "Réseaux sociaux"
+            name: "social"
+            widget: "object"
+            fields:
+              - {label: "Instagram", name: "instagram", widget: "string", required: false}
+              - {label: "TikTok", name: "tiktok", widget: "string", required: false}
+              - {label: "Facebook", name: "facebook", widget: "string", required: false}
+              - {label: "WhatsApp", name: "whatsapp", widget: "string", required: false}
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+          - {label: "Formspree endpoint", name: "formspree_endpoint", widget: "string", required: false}

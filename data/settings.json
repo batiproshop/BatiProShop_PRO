@@ -1,0 +1,27 @@
+{
+  "company_name": "BatiProShop",
+  "legal_form": "SASU",
+  "capital": "1000 €",
+  "siren": "",
+  "tva_intra": "",
+  "address": "Paris, France",
+  "email": "batiproshop2025@gmail.com",
+  "phone": "",
+  "theme": {
+    "primary": "#1f4aff",
+    "background": "#f6f7f8",
+    "text": "#111111",
+    "button_text": "#ffffff"
+  },
+  "social": {
+    "instagram": "",
+    "tiktok": "",
+    "facebook": "",
+    "whatsapp": ""
+  },
+  "seo": {
+    "title": "BatiProShop — Outils, Électricité, Accessoires, Sécurité",
+    "description": "Magasin d’outillage et matériaux: électricité, outils, consommables, sécurité. Prix justes, livraison rapide."
+  },
+  "formspree_endpoint": ""
+}

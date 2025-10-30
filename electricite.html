@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Électricité – BatiProShop</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="/index.html">BatiProShop</a>
+    <nav class="nav">
+      <a href="/electricite.html">Électricité</a>
+      <a href="/outils.html">Outils</a>
+      <a href="/accessoires.html">Accessoires</a>
+      <a href="/securite.html">Sécurité</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/panier.html">🛒 Panier (<span id="cart-count">0</span>)</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Électricité</h1>
+  <div class="search">
+    <input id="search" type="text" placeholder="Rechercher...">
+    <div class="filter" id="filters"></div>
+  </div>
+  <div id="product-grid" class="grid"></div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© 2025 BatiProShop — Livraison · Retour · Confidentialité</div>
+  </div>
+</footer>
+
+<script type="module">
+  import { renderCategory } from '/js/catalog.js';
+  renderCategory('electricite');
+</script>
+<script type="module" src="/js/cart.js"></script>
+<script>
+fetch('/data/settings.json').then(r=>r.json()).then(s=>{ 
+  document.documentElement.style.setProperty('--primary', s.theme.primary||'#1f4aff');
+  document.documentElement.style.setProperty('--bg', s.theme.background||'#f6f7f8');
+  document.documentElement.style.setProperty('--text', s.theme.text||'#111');
+  document.documentElement.style.setProperty('--btn-text', s.theme.button_text||'#fff');
+});
+</script>
+</body></html>

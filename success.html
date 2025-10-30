@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merci – BatiProShop</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="/index.html">BatiProShop</a>
+    <nav class="nav">
+      <a href="/electricite.html">Électricité</a>
+      <a href="/outils.html">Outils</a>
+      <a href="/accessoires.html">Accessoires</a>
+      <a href="/securite.html">Sécurité</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/panier.html">🛒 Panier (<span id="cart-count">0</span>)</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Merci pour votre commande !</h1>
+  <p>Votre panier a été vidé. Vous recevrez un email de confirmation.</p>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© 2025 BatiProShop — Livraison · Retour · Confidentialité</div>
+  </div>
+</footer>
+
+<script>
+localStorage.removeItem('bp_cart');
+</script>
+<script type="module" src="/js/cart.js"></script>
+</body></html>

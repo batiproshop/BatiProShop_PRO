@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paiement – BatiProShop</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a class="logo" href="/index.html">BatiProShop</a>
+    <nav class="nav">
+      <a href="/electricite.html">Électricité</a>
+      <a href="/outils.html">Outils</a>
+      <a href="/accessoires.html">Accessoires</a>
+      <a href="/securite.html">Sécurité</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/panier.html">🛒 Panier (<span id="cart-count">0</span>)</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Paiement</h1>
+  <div class="card">
+    <form id="orderForm">
+      <input name="nom" placeholder="Nom" required>
+      <input name="email" type="email" placeholder="Email" required>
+      <input name="adresse" placeholder="Adresse de livraison" required>
+      <textarea name="notes" placeholder="Remarques (optionnel)"></textarea>
+      <button class="btn" type="submit">Envoyer la commande</button>
+    </form>
+    <p id="orderStatus"></p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div>© 2025 BatiProShop — Livraison · Retour · Confidentialité</div>
+  </div>
+</footer>
+
+<script type="module" src="/js/cart.js"></script>
+<script type="module" src="/js/resume.js"></script>
+</body></html>
